@@ -1,0 +1,61 @@
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+/* Adapted from https://www.reddit.com/r/FirefoxCSS/comments/ao3ydl/configuring_firefox_for_tree_style_tab_usage/ */
+
+:root {
+  --uc-btnbox-leftpad: 75px;
+}
+:root[inFullscreen] {
+  --uc-btnbox-leftpad: 15px;
+}
+:root[privatebrowsingmode="temporary"] #nav-bar::after {
+  display: flex;
+  content: url("chrome://global/skin/icons/indicator-private-browsing.svg") "\00a0사생활 보호 모드";
+  padding: 4px;
+  align-items: center;
+}
+
+/* hide native tabs and sidebar header */
+#TabsToolbar-customization-target {
+  visibility: collapse;
+}
+#sidebar-header {
+  visibility: collapse;
+}
+
+/* recolor elements and enable window dragging */
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor);
+  background-image: var(--toolbar-bgimage);
+  background-clip: padding-box;
+  color: var(--toolbar-color);
+  
+  -moz-window-dragging: drag;
+}
+
+/* 탭 부분 지우기 */
+#TabsToolbar > .titlebar-spacer { display: none }
+#TabsToolbar > .toolbar-items { display: none; }
+/* 탭+타이틀바 부분 높이 제거 */
+#titlebar,
+#TabsToolbar {
+  height: 0px !important;
+  min-height: 0px !important;
+  display: block;
+}
+#TabsToolbar .titlebar-buttonbox-container {
+  min-height: calc(var(--tab-min-height) + 4px) !important;
+  padding: 2px 0;
+  position: absolute;
+}
+
+#nav-bar {
+  /* 창 모드에서 맥 창 제어 버튼? 들어갈 공간 내주기 */
+  padding: 0px 15px 0px var(--uc-btnbox-leftpad) !important;
+
+  /* 뭔지모름 */
+  box-shadow: none !important;
+}
+
+.private-browsing-indicator-with-label {
+  display: none !important;
+}
