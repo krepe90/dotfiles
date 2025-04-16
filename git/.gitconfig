@@ -1,0 +1,57 @@
+[core]
+	editor = "code --wait"
+	excludesfile = ~/.gitignore
+	# fsmonitor = true
+	# untrackedCache = true
+
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[commit]
+	verbose = true
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[format]
+    pretty = fuller
+[help]
+    autocorrect = prompt
+[init]
+    defaultBranch = main
+[log]
+    date = iso
+[merge]
+    conflictstyle = zdiff3
+[pull]
+    rebase = true
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[tag]
+    sort = version:refname
+
+[alias]
+    out = "log @{u}.."
+    co = checkout
+    ci = commit
+    st = status
+    br = branch -v
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    dft = difftool
