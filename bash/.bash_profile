@@ -1,7 +1,7 @@
-######## Styles ########
+source $HOME/dotfiles/bash/.bash_git
+source $HOME/dotfiles/bash/.bash_aliases
 
-# bash_git for __git_ps1()
-source $HOME/dotfiles/.bash_git
+######## Styles ########
 
 # https://github.com/mkasberg/dotfiles/blob/b496e5e5fd6e490708fc1b56c088952b3ae874bc/dot_bashrc#L71
 
@@ -50,5 +50,3 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # gitignore.io
 function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}
-
-alias ll='ls -alH --color=auto'
