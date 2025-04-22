@@ -46,12 +46,16 @@
     sort = version:refname
 
 [alias]
-    out = "log @{u}.."
-    co = checkout
-    ci = commit
-    st = status
     br = branch -v
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    type = cat-file -t
-    dump = cat-file -p
+
+    co = checkout
     dft = difftool
+    dump = cat-file -p
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    out = "log @{u}.."
+    s = status -s
+    st = stash
+    sl = stash list --color --format='%C(yellow)%h%Creset %gs' --stat
+    sp = stash pop
+    ss = stash save -s
+    type = cat-file -t
