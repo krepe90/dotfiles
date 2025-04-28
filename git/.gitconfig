@@ -51,9 +51,9 @@
     co = checkout
     dft = difftool
     dump = cat-file -p
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    hist = log --pretty=format:'%C(auto)%h %as | %C(cyan)[%an]%C(auto) %s%d' --graph --color
     out = "log @{u}.."
-    s = status -s
+    s = status -S
     st = stash
     sl = stash list --color --format='%C(yellow)%h%Creset %gs' --stat
     sp = stash pop
