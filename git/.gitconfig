@@ -1,15 +1,15 @@
 [core]
-	editor = "code --wait"
-	excludesfile = ~/.gitignore
-	# fsmonitor = true
-	# untrackedCache = true
+    editor = "code --wait"
+    excludesfile = ~/.gitignore
+    # fsmonitor = true
+    # untrackedCache = true
 
 [branch]
-	sort = -committerdate
+    sort = -committerdate
 [column]
-	ui = auto
+    ui = auto
 [commit]
-	verbose = true
+    verbose = true
 [diff]
     algorithm = histogram
     colorMoved = plain
