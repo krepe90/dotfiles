@@ -47,15 +47,15 @@
 
 [alias]
     br = branch -v
-
     co = checkout
     dft = difftool
     dump = cat-file -p
     hist = log --pretty=format:'%C(auto)%h %as | %C(cyan)[%an]%C(auto) %s%d' --graph --color
     out = "log @{u}.."
-    s = status -S
+    pnp = "!git pull --rebase && git push"
+    s = status
     st = stash
     sl = stash list --color --format='%C(yellow)%h%Creset %gs' --stat
-    sp = stash pop
-    ss = stash save -s
+    sp = stash pop --index
+    ss = stash save --staged
     type = cat-file -t
