@@ -29,6 +29,8 @@
     date = iso
 [merge]
     conflictstyle = zdiff3
+[pager]
+    diff=false
 [pull]
     rebase = true
 [push]
@@ -52,6 +54,7 @@
     dump = cat-file -p
     hist = log --pretty=format:'%C(auto)%h %as | %C(cyan)[%an]%C(auto) %s%d' --graph --color
     out = "log @{u}.."
+    pdiff = --paginate diff
     pnp = "!git pull --rebase && git push"
     s = status
     st = stash
