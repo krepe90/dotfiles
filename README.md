@@ -37,3 +37,16 @@ TBD
 cd ~/Library/Application Support/Firefox/Profiles/{여기에 프로필 입력}/chrome
 ln -s $HOME/dotfiles/firefox/userChrome.css ./userChrome.css
 ```
+
+## Claude Code
+
+### slash commands
+
+[Claude Code: Custom slash commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands#custom-slash-commands)
+
+```bash
+# 자주 사용하는 명령어 symlink로 추가
+# claude code 내에서 `/{command}` 혹은 `/c:{command}` 형태로 사용 가능
+# c는 common의 c (별로같기도...)
+ln -s ~/dotfiles/claude/commands ~/.claude/commands/c
+```
