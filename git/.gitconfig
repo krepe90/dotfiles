@@ -49,9 +49,11 @@
 
 [alias]
     br = branch -v
+    c = commit
     co = checkout
     dft = difftool
     dump = cat-file -p
+    empty-commit = commit --allow-empty
     hist = log --pretty=format:'%C(auto)%h %as | %C(cyan)[%an]%C(auto) %s%d' --graph --color
     out = "log @{u}.."
     pdiff = --paginate diff
