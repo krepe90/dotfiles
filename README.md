@@ -40,6 +40,13 @@ ln -s $HOME/dotfiles/firefox/userChrome.css ./userChrome.css
 
 ## Claude Code
 
+### settings
+
+```bash
+# claude code 설정 파일 symlink로 추가
+ln -s ~/dotfiles/claude/settings.json ~/.claude/settings.json
+```
+
 ### slash commands
 
 [Claude Code: Custom slash commands](https://docs.anthropic.com/en/docs/claude-code/slash-commands#custom-slash-commands)
