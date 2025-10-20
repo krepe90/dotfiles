@@ -1,0 +1,17 @@
+[settings]
+python.uv_venv_auto = true 
+
+[tools]
+# Python
+python = "3.13"
+uv = "latest"
+
+# Node
+node = "20"
+pnpm = "latest"
+
+aws-cli = "latest"
+ruff = "latest"
+
+[env]
+# 전역 환경변수

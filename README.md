@@ -57,3 +57,10 @@ ln -s ~/dotfiles/claude/settings.json ~/.claude/settings.json
 # c는 common의 c (별로같기도...)
 ln -s ~/dotfiles/claude/commands ~/.claude/commands/c
 ```
+
+## mise
+
+```bash
+ln -s ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
+mise i
+```
