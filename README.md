@@ -31,6 +31,12 @@ TBD
     path = ~/dotfiles/git/.gitconfig
 ```
 
+## vim
+
+```bash
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+```
+
 ## Firefox
 
 ```bash
