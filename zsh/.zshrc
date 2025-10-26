@@ -110,4 +110,5 @@ else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-export PATH=$PATH:/opt/homebrew/bin/python3
+# mise
+eval "$(~/.local/bin/mise activate zsh)"

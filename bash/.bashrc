@@ -55,3 +55,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 ########
+
+# mise
+eval "$(~/.local/bin/mise activate bash)"

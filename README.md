@@ -61,6 +61,12 @@ ln -s ~/dotfiles/claude/commands ~/.claude/commands/c
 ## mise
 
 ```bash
+curl https://mise.run | sh
+```
+
+```bash
+mise trust
+mkdir -p ~/.config/mise
 ln -s ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
 mise i
 ```
