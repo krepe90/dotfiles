@@ -76,3 +76,9 @@ mkdir -p ~/.config/mise
 ln -s ~/dotfiles/mise/config.toml ~/.config/mise/config.toml
 mise i
 ```
+
+## ghostty
+
+```bash
+ln -s ~/dotfiles/ghostty/config ~/.config/ghostty/config
+```
