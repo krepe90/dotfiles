@@ -44,11 +44,16 @@ window-width = 120
 window-padding-x = 4
 window-padding-y = 0,8
 
+macos-titlebar-style = tabs
+
 # color settings
 theme = Chalk
 
 background-blur = 30
 background-opacity = 0.9
+
+# external settings
+shell-integration-features = ssh-env
 
 # claude code terminal intergration
 keybind = shift+enter=text:\x1b\r
