@@ -53,8 +53,9 @@ background-blur = 30
 background-opacity = 0.9
 
 # external settings
-shell-integration-features = ssh-env
+shell-integration-features = ssh-env,cursor
 
 # claude code terminal intergration
 keybind = shift+enter=text:\x1b\r
-
+# macOS toggle fullscreen
+keybind = super+shift+f=toggle_fullscreen
