@@ -10,13 +10,19 @@ guard screens.count > 0 else {
 }
 
 // Compute the center of a given screen.
+// Converts from AppKit coordinates (origin bottom-left, Y up) to
+// Quartz coordinates (origin top-left, Y down) for CGWarpMouseCursorPosition.
 func centerOfScreen(_ screen: NSScreen) -> CGPoint {
     let frame = screen.frame
-    let center = CGPoint(
-        x: frame.origin.x + frame.size.width / 2,
-        y: frame.origin.y + frame.size.height / 2
-    )
-    return center
+    let primaryScreenHeight = NSScreen.screens[0].frame.height
+
+    let centerX = frame.origin.x + frame.size.width / 2
+    let centerY = frame.origin.y + frame.size.height / 2
+
+    // Flip Y coordinate for Quartz
+    let cgY = primaryScreenHeight - centerY
+
+    return CGPoint(x: centerX, y: cgY)
 }
 
 // Moves the mouse pointer to the given point.
