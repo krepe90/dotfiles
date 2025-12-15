@@ -41,5 +41,9 @@
       "Read(./secrets/**)"
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "/Users/krepe90/dotfiles/claude/statusline.sh"
+  },
   "alwaysThinkingEnabled": true
 }
