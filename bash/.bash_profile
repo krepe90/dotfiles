@@ -9,5 +9,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export HISTSIZE=10000
 export HISTFILESIZE=20000
 
+# Claude Code MCP max token setting
+export MAX_MCP_OUTPUT_TOKENS=50000
+
 # set ghostty config editor
 export EDITOR="vim"
