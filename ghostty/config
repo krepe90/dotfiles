@@ -21,9 +21,11 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
+# 한글 테스트 입니다
+
 # font settings
 font-family = "JetBrains Mono"
-font-family = "D2Coding"
+font-family = "goorm Sans Code"
 font-size = 14
 font-thicken = true
 font-thicken-strength = 127
