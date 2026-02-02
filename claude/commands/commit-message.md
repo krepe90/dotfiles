@@ -4,6 +4,7 @@ Steps:
 1. Run `git log -5` to check existing commit style.
 2. Run `git diff --cached` to view staged changes.
 3. Output a commit message in a code block.
+4. Copy the commit message to clipboard using `echo -n "message" | pbcopy`.
 
 Examples:
 - `fix: resolve null pointer in authentication`
