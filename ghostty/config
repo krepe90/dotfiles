@@ -41,8 +41,8 @@ alpha-blending = linear
 cursor-style = block_hollow
 
 # window settings
-window-height = 40
-window-width = 120
+# window-height = 40
+# window-width = 120
 window-padding-x = 4
 window-padding-y = 0,8
 
