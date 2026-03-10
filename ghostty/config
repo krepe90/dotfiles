@@ -33,7 +33,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
-adjust-cell-width = -1
+adjust-cell-width = 0
 adjust-cell-height = -2
 
 alpha-blending = linear
