@@ -57,5 +57,17 @@
   "enabledPlugins": {
     "Notion@claude-plugins-official": true
   },
+  "sandbox": {
+    "enabled": true,
+    "filesystem": {
+      "allowWrite": [
+        "~/.cache/uv",
+        "~/.local/share/uv",
+        "~/.npm",
+        "~/.local/share/pnpm",
+        "~/.pnpm-store"
+      ]
+    }
+  },
   "language": "한국어"
 }
