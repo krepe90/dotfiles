@@ -112,3 +112,5 @@ fi
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+alias ccc="claude --allow-dangerously-skip-permissions"
