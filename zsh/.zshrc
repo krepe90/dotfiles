@@ -109,8 +109,12 @@ if [[ "$(arch)" == "arm64" ]]; then
 else
     eval "$(/usr/local/bin/brew shellenv)"
 fi
+HOMEBREW_NO_ENV_HINTS=1
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
 
 alias ccc="claude --allow-dangerously-skip-permissions"
+
+# gitignore.io
+function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}
