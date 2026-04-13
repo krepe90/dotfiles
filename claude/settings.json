@@ -38,7 +38,6 @@
       "mcp__plugin_Notion_notion__notion-search",
       "mcp__plugin_Notion_notion__notion-fetch",
       "mcp__plugin_Notion_notion__notion-update-page",
-      "mcp__serena",
       "mcp__tosspayments-integration-guide__get-v2-documents",
       "WebFetch",
       "WebSearch"
@@ -48,6 +47,7 @@
       "Read(./.env.*)",
       "Read(./secrets/**)"
     ],
+    "ask": [],
     "defaultMode": "acceptEdits"
   },
   "statusLine": {
@@ -55,19 +55,44 @@
     "command": "/Users/krepe90/dotfiles/claude/statusline.sh"
   },
   "enabledPlugins": {
-    "Notion@claude-plugins-official": true
+    "notion@claude-plugins-official": true
   },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  },
+  "language": "한국어",
   "sandbox": {
     "enabled": true,
+    "allowUnsandboxedCommands": false,
+    "network": {
+      "allowedDomains": [
+        "api.notion.com"
+      ]
+    },
     "filesystem": {
       "allowWrite": [
         "~/.cache/uv",
         "~/.local/share/uv",
         "~/.npm",
         "~/.local/share/pnpm",
-        "~/.pnpm-store"
+        "~/.pnpm-store",
+        "~/.yarn",
+        "~/.dotnet"
       ]
     }
   },
-  "language": "한국어"
+  "effortLevel": "high",
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true
 }
