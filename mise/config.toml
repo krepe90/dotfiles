@@ -10,6 +10,8 @@ uv = "latest"
 node = "20"
 pnpm = "latest"
 
+rust = "latest"
+
 aws-cli = "latest"
 ruff = "latest"
 
