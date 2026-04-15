@@ -88,7 +88,8 @@
         "~/.local/share/pnpm",
         "~/.pnpm-store",
         "~/.yarn",
-        "~/.dotnet"
+        "~/.dotnet",
+        "~/.gnupg"
       ]
     }
   },
