@@ -1,5 +1,2 @@
-alias ll='ls -alHF --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
-
-alias ccc='claude --allow-dangerously-skip-permissions'
+# Compatibility wrapper. Shared aliases live in sh/aliases.sh.
+. "$HOME/dotfiles/sh/aliases.sh"

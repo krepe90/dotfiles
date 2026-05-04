@@ -1,5 +1,14 @@
 # External git prompt script (for showing git status in PS1)
-source $HOME/dotfiles/bash/.bash_git
+. "$HOME/dotfiles/bash/.bash_git"
+
+# Shared interactive configuration.
+. "$HOME/dotfiles/sh/env.sh"
+. "$HOME/dotfiles/sh/aliases.sh"
+. "$HOME/dotfiles/sh/functions.sh"
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+export HISTSIZE=10000
+export HISTFILESIZE=20000
 
 
 ######## Styles ########
@@ -43,13 +52,9 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# enable color support of ls and also add handy aliases
+# enable color support of grep
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -109,10 +114,5 @@ case "$PROMPT_COMMAND" in
   * ) PROMPT_COMMAND="__title_from_context; ${PROMPT_COMMAND}" ;;
 esac
 
-
 ######## mise ########
 eval "$(~/.local/bin/mise activate bash)"
-
-######## Functions ########
-# gitignore.io
-function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}

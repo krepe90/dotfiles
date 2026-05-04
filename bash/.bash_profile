@@ -1,16 +1,18 @@
-source $HOME/dotfiles/bash/.bashrc
-source $HOME/dotfiles/bash/.bash_aliases
-
 # disable zsh warning
 # https://support.apple.com/kb/HT208050
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=10000
-export HISTFILESIZE=20000
+# Shared login environment.
+. "$HOME/dotfiles/sh/env.sh"
 
-# Claude Code MCP max token setting
-export MAX_MCP_OUTPUT_TOKENS=50000
+# Homebrew
+if [ "$(arch)" = "arm64" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
 
-# set ghostty config editor
-export EDITOR="vim"
+# bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi

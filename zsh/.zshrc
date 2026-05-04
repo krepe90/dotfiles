@@ -103,18 +103,33 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# brew
-if [[ "$(arch)" == "arm64" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-else
-    eval "$(/usr/local/bin/brew shellenv)"
+# Shared interactive configuration.
+. "$HOME/dotfiles/sh/env.sh"
+. "$HOME/dotfiles/sh/aliases.sh"
+. "$HOME/dotfiles/sh/functions.sh"
+
+if [ -z "$LANG" ] || [ "$LANG" = "C" ]; then
+    export LANG="en_US.UTF-8"
 fi
-HOMEBREW_NO_ENV_HINTS=1
 
 # mise
 eval "$(~/.local/bin/mise activate zsh)"
 
-alias ccc="claude --allow-dangerously-skip-permissions"
+# cargo
+export PATH="/Users/krepe90/.cargo/bin:$PATH"
 
-# gitignore.io
-function gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# brew auto completions
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi
