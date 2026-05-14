@@ -11,6 +11,7 @@ sandbox_mode = "workspace-write"
 show_raw_agent_reasoning = true
 suppress_unstable_features_warning = true
 service_tier = "fast"
+approvals_reviewer = "guardian_subagent"
 # zsh_path = "/opt/homebrew/bin/zsh"
 
 [analytics]
@@ -35,6 +36,7 @@ responses_websockets = true
 tool_search_always_defer_mcp_tools = true
 undo = true
 voice_transcription = false
+goals = true
 
 [feedback]
 enabled = false

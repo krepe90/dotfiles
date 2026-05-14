@@ -58,6 +58,6 @@ background-opacity = 0.9
 shell-integration-features = ssh-env,cursor
 
 # claude code terminal intergration
-keybind = shift+enter=text:\x1b\r
+# keybind = shift+enter=text:\x1b\r
 # macOS toggle fullscreen
 keybind = super+shift+f=toggle_fullscreen
