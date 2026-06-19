@@ -44,6 +44,9 @@ fast_default_opt_out = true
 hide_full_access_warning = true
 hide_rate_limit_model_nudge = true
 
+[sandbox_workspace_write]
+network_access = true
+
 [projects."/Users/krepe90/dotfiles"]
 trust_level = "trusted"
 

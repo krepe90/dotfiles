@@ -1,6 +1,7 @@
 [core]
     editor = "code --wait"
     excludesfile = ~/.gitignore
+    quotePath = false
     # fsmonitor = true
     # untrackedCache = true
 
